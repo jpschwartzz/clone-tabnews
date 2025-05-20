@@ -1,0 +1,16 @@
+[1mdiff --git a/pages/api/v1/status/index.js b/pages/api/v1/status/index.js[m
+[1mindex d2358a8..c5bf723 100644[m
+[1m--- a/pages/api/v1/status/index.js[m
+[1m+++ b/pages/api/v1/status/index.js[m
+[36m@@ -1,9 +1,9 @@[m
+[31m-import database from "../../../../infra/database.js";[m
+[32m+[m[32mimport database from "infra/database.js";[m
+ [m
+ async function status(request, response) {[m
+   const result = await database.query("SELECT 1 + 1 as sum;");[m
+   console.log(result.rows);[m
+[31m-  response.status(200).json({ chave: "valor" });[m
+[32m+[m[32m  response.status(200).json({ chave: "são acima da média" });[m
+ }[m
+ [m
+ export default status;[m
